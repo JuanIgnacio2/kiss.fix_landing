@@ -1,4 +1,4 @@
-import {useState} from "react"; 
+import {useEffect, useRef, useState} from "react"; 
 import { FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: 'Sobre Nosotros', href: '#about' },
     { name: 'Contacto', href: '#contact' },
     ]
-
+    
     return(
         <nav className="w-full fixed top-0 left-0 z-50 bg-black bg-opacity-90 shadow-md">
             <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -24,12 +24,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Menú de escritorio */}
-                <ul className="hidden md:flex space-x-8 text-white text-lg">
+                <ul className="hidden md:flex space-x-8 text-white text-xl">
                 {menuItems.map((item) => (
                     <li key={item.name}>
                     <a
                         href={item.href}
-                        className="hover:text-[#D4AF37] transition"
+                        className="text-white px-2 py-1 border-b-2 border-transparent hover:border-[#D4AF37] transition-all duration-200"
                     >
                         {item.name}
                     </a>
@@ -43,13 +43,13 @@ const Navbar = () => {
                     href="https://instagram.com/tuperfil"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#D4AF37] text-2xl hover:text-white transition mr-4"
+                    className="text-white text-2xl transition mr-4 hover:scale-105"
                 >
                     <FaInstagram />
                 </a>
 
                 <button
-                    className="text-white text-2xl ml-4 p-1 rounded bg-[#d4af3744] backdrop-blur-sm md:hidden"
+                    className="md:hidden flex flex-col justify-center items-center w-8 h-8 relative"
                     onClick={toggleMenu}
                     aria-label="Menú"
                 >
@@ -63,13 +63,13 @@ const Navbar = () => {
                 menuOpen ? 'max-h-60 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
                 }`}
             >
-                <div className="bg-gray-900 px-6 py-4 space-y-4 text-white text-lg transform transition-transform rounded-b-lg shadow-md">
+                <div className="bg-gray-900 px-6 py-4 space-y-4 text-white text-lg flex flex-col items-center justify-center transform transition-transform rounded-b-lg shadow-md">
                     {menuItems.map((item) => (
                         <a
                         key={item.name}
                         href={item.href}
                         onClick={() => setMenuOpen(false)}
-                        className="block hover:text-[#D4AF37] transition"
+                        className="block text-white px-2 py-2 rounded hover:bg-[#D4AF37]/20 hover:text-[#D4AF37] transition-all duration-200"
                         >
                         {item.name}
                         </a>

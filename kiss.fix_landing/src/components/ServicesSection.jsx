@@ -49,15 +49,15 @@ const ServicesSection = () => {
                             alt={service.title}
                             className="w-full md:w-1/2 rounded-2xl border-4 border-[#D4AF37] object-cover transition-transform duration-300 hover:scale-105 shadow-lg"
                         />
-                        <div className='md:w-1/2 flex flex-col justify-center'>
-                            <div className="md:w-1/2">
+                        <div className='flex flex-col justify-center'>
+                            <div mb-4>
                                 <h3 className="text-2xl font-semibold mb-4 flex items-center">
                                     {service.icon}
                                     {service.title}
                                 </h3>
                             </div>
-                            <div className="md:w-1/2">
-                                <p className="text-gray-300">
+                            <div className="mb-4">
+                                <p className="text-gray-300 text-lg">
                                     {service.description}
                                 </p>
                             </div>
