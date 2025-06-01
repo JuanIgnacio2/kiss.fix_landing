@@ -1,9 +1,13 @@
 const HeroSection = () => {
     return (
-        <section className = "h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-blue-600 to-purple-600 text-white px-4">
-            <h1 className = "text-5xl md:text-7xl font-bold mb-4">Bienvenido a Tu Empresa</h1>
-            <p className = "text-lg md:text-xl mb-8">Ofrecemos soluciones innovadoras para tu negocio</p>
-            <button className = "bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
+        <section className = "min-h-screen flex flex-col justify-center items-center text-center px-4 bg-black">
+            <h1 className = "text-5xl font-bold text-white mb-4">
+                <span className="text-[#D4AF37]">KISS FIX</span> REPAIRS
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+                Reparación profesional de dispositivos electrónicos, celulares, computadoras y más.
+            </p>
+            <button className = "bg-[#D4AF37] text-black px-6 py-3 rounded-full shadow hover:bg-yellow-500 transition">
                 Contáctanos
             </button>
         </section>
