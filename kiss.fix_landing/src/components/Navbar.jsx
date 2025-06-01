@@ -60,7 +60,7 @@ const Navbar = () => {
             {/* Menú móvil con efecto slide */}
             <div
                 className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                menuOpen ? 'max-h-60 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
+                menuOpen ? 'max-h-80 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
                 }`}
             >
                 <div className="bg-gray-900 px-6 py-4 space-y-4 text-white text-lg flex flex-col items-center justify-center transform transition-transform rounded-b-lg shadow-md">
