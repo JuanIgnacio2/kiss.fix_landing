@@ -40,16 +40,16 @@ const ServicesSection = () => {
                         index % 2 !== 0 ? 'md:flex-row-reverse' : ''
                         } items-center gap-8`}
                         initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.2 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.2 }}
                     >
                         <img
                             src={`${service.img}?auto=format&fit=crop&w=600&q=80`}
                             alt={service.title}
                             className="w-full md:w-1/2 rounded-2xl border-4 border-[#D4AF37] object-cover transition-transform duration-300 hover:scale-105 shadow-lg"
                         />
-                        <div className='flex flex-col justify-center'>
+                        <div className='w-full md:w-1/2 flex flex-col justify-center'>
                             <div mb-4>
                                 <h3 className="text-2xl font-semibold mb-4 flex items-center">
                                     {service.icon}
@@ -65,7 +65,7 @@ const ServicesSection = () => {
                     </motion.div>
                 ))}
             </div>
-            </section>
+        </section>
     )
 }
 

@@ -2,31 +2,42 @@ import { FaWhatsapp } from 'react-icons/fa'
 
 const ContactSection = () => {
     return (
-        <section id="contact" className="py-10 bg-black text-white text-center px-4">
-            <h2 className='text-3xl font-bold text-[#D4AF37] mb-6'>
-                Contacto
-            </h2>
-            <p className="text-lg text-gray mb-8">
-                ¿Tenés un problema con tu dispositivo? Contactanos directamente por WhatsApp.
-            </p>
-
-            <div className="flex justify-center gap-8 flex-wrap">
-                <a
-                    href="https://wa.me/5491134567890"
-                    target='_blank'
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-xl hover:bg-[#1ebd5a] transition"
-                >
-                   <FaWhatsapp className="text-2xl"/> Hablar con Juan
-                </a>
-                <a
-                    href="https://wa.me/5491198765432"
-                    target='_blank'
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-xl hover:bg-[#1ebd5a] transition"
-                >
-                    <FaWhatsapp className="text-2xl"/> Hablar con Aixa
-                </a>
+        <section id="contact" className="py-16 px-6 bg-black text-white">
+            <div className="max-w-4xl mx-auto text-center">
+                <h2 className='text-3xl font-bold text-[#D4AF37] mb-6'>
+                    Contacto
+                </h2>
+                <p className="text-lg text-gray-400 mb-12">
+                    ¿Tenés un problema con tu dispositivo? Contactanos directamente por WhatsApp.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    {/* Contacto Juan */}
+                    <div className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 className="text-2xl font-semibold mb-2 text-[#D4AF37]">Juan</h3>
+                        <p className="text-gray-400 mb-4">Especialista en reparación de hardware.</p>
+                        <a
+                            href="https://wa.me/5491134567890"
+                            target='_blank'
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebd5a] transition"
+                        >
+                        <FaWhatsapp className="text-2xl animate-pulse"/> Whatsapp
+                        </a>
+                    </div>
+                    {/* Contacto Aixa */}
+                    <div className='bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300S'>
+                        <h3 className="text-2xl font-semibold mb-2 text-[#D4AF37]">Aixa</h3>
+                        <p className="text-gray-400 mb-4">Especialista en reparación de hardware.</p>
+                        <a
+                            href="https://wa.me/5491198765432"
+                            target='_blank'
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebd5a] transition"
+                        >
+                            <FaWhatsapp className="text-2xl animate-pulse"/> Whatsapp
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     )

@@ -22,7 +22,7 @@ const AboutUsSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6}}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2}}
             >
                 Sobre nosotros
             </motion.h2>
@@ -31,10 +31,10 @@ const AboutUsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
             >
                 <p className="text-lg mb-6">
-                    En <span className="text-[#D4AF37] font-semibold">KISS FIX REPAIRS</span> somos un equipo apasionado por la tecnología y las soluciones prácticas.
+                    En <span className="text-[#D4AF37] font-semibold">KISS FIX ELECTRONICS</span> somos un equipo apasionado por la tecnología y las soluciones prácticas.
                     Nos especializamos en reparaciones de celulares, computadoras y dispositivos electrónicos con un enfoque en la calidad, la confianza y la atención personalizada.
                 </p>
                 <p className="text-lg mb-6">
@@ -49,7 +49,7 @@ const AboutUsSection = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4, delay: index * 0.2 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.2 }}
                     >
                         <img
                             src={member.image}
