@@ -16,7 +16,7 @@ const teamMembers = [
 
 const AboutUsSection = () => {
     return (
-        <section className="py-16 px-6 bg-black text-white">
+        <section id="about" className="py-16 px-6 bg-black text-white">
             <motion.h2
                 className="text-3xl font-bold text-center text-[#D4AF37] mb-12"
                 initial={{ opacity: 0, y: 30 }}
