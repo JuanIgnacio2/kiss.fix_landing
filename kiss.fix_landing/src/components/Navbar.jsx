@@ -12,10 +12,10 @@ const Navbar = () => {
     { name: 'Sobre Nosotros', href: '#about' },
     { name: 'Contacto', href: '#contact' },
     ]
-    
+
     return(
-        <nav className="w-full fixed top-0 left-0 z-50 bg-black bg-opacity-90 shadow-md">
-            <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <nav className="bg-black text-white py-4 shadow-md">
+            <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
                 {/*LOGO*/}
                 <div className="text-2xl font-bold">
                     <a href="/" className="flex items-center">
@@ -29,7 +29,7 @@ const Navbar = () => {
                     <li key={item.name}>
                     <a
                         href={item.href}
-                        className="text-white px-2 py-1 border-b-2 border-transparent hover:border-[#D4AF37] transition-all duration-200"
+                        className="text-white px-2 py-1 border-b-2 border-transparent hover:border-[#D4AF37] transition-all duration-400"
                     >
                         {item.name}
                     </a>

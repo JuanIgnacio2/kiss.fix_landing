@@ -8,7 +8,7 @@ const HeroSection = () => {
             <img
                 src={logo}
                 alt="Kiss Fix Logo"
-                className="absolute inset-0 w-full h-full object-contain opacity-10 blur-sm pointer-events-none scale-125"
+                className="absolute inset-0 w-full h-full object-contain opacity-12 blur-sm pointer-events-none scale-125"
             />
             {/* Capa oscura para mejor legibilidad */}
             <div className="absolute inset-0 bg-black opacity-60"/>
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 </motion.p>
                 <motion.a
                     href="#contact"
-                    className="bg-[#D4AF37] text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300"
+                    className="bg-[#D4AF37] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6, duration: 0.5 }}

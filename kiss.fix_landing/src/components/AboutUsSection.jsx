@@ -41,11 +41,11 @@ const AboutUsSection = () => {
                     Fundado por <span className="text-white font-medium">Juan</span> y <span className="text-white font-medium">Aixa</span>, nuestro objetivo es que cada cliente se vaya con su dispositivo funcionando como nuevo y una sonrisa en el rostro.
                 </p>   
             </motion.div>
-            <div className='flex flex-col md:flex-row justify-center gap-20'>
+            <div className='flex flex-col md:flex-row items-center gap-16'>
                 {teamMembers.map((member, index) => (
                     <motion.div
                         key={index}
-                        className="text-center"
+                        className="text-center w-full md:w-1/2"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4, delay: index * 0.2 }}
@@ -54,7 +54,7 @@ const AboutUsSection = () => {
                         <img
                             src={member.image}
                             alt={member.name}
-                            className="w-40 h-40 rounded-full mx-auto mb-4 border-4 border-[#D4AF37] object-cover"
+                            className="w-50 h-50 rounded-full mx-auto mb-4 border-4 border-[#D4AF37] object-cover"
                         />
                         <h3 className="text-xl font-semibold">{member.name}</h3>
                         <p className="text-gray-400">{member.role}</p>

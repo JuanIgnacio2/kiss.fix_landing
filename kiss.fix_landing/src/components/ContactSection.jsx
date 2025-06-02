@@ -19,9 +19,9 @@ const ContactSection = () => {
                             href="https://wa.me/5491134567890"
                             target='_blank'
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebd5a] transition"
+                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-4 rounded-full hover:bg-[#1ebd5a] transition"
                         >
-                        <FaWhatsapp className="text-2xl animate-pulse"/> Whatsapp
+                        <FaWhatsapp className="text-4xl animate-pulse"/>
                         </a>
                     </div>
                     {/* Contacto Aixa */}
@@ -32,9 +32,9 @@ const ContactSection = () => {
                             href="https://wa.me/5491198765432"
                             target='_blank'
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebd5a] transition"
+                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-4 rounded-full hover:bg-[#1ebd5a] transition"
                         >
-                            <FaWhatsapp className="text-2xl animate-pulse"/> Whatsapp
+                            <FaWhatsapp className="text-4xl animate-pulse"/>
                         </a>
                     </div>
                 </div>
