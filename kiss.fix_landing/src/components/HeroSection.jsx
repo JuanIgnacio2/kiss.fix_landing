@@ -1,14 +1,17 @@
-import logo from '../assets/kiss.fix_logo.png';
+import logo from '../assets/kiss.fix_variant.png';
 import {motion} from 'framer-motion';
 
 const HeroSection = () => {
     return (
         <section id="hero" className = "relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-black overflow-hidden">
             {/* Imagen de fondo tipo marca de agua */}
-            <img
+            <motion.img
                 src={logo}
                 alt="Kiss Fix Logo"
-                className="absolute inset-0 w-full h-full object-contain opacity-12 blur-sm pointer-events-none scale-125"
+                className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                initial={{scale: 1.2, filter: "blur(0px)"}}
+                animate={{scale: 1, filter: "blur(4px)"}}
+                transition={{duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "reverse"}}
             />
             {/* Capa oscura para mejor legibilidad */}
             <div className="absolute inset-0 bg-black opacity-60"/>
