@@ -12,7 +12,7 @@ const ContactSection = () => {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {/* Contacto Juan */}
-                    <div className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div className="border-4 border-[#D4AF37] p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <h3 className="text-2xl font-semibold mb-2 text-[#D4AF37]">Juan</h3>
                         <p className="text-gray-400 mb-4">Especialista en reparación de hardware.</p>
                         <a
@@ -25,7 +25,7 @@ const ContactSection = () => {
                         </a>
                     </div>
                     {/* Contacto Aixa */}
-                    <div className='bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300S'>
+                    <div className='border-4 border-[#D4AF37] p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300S'>
                         <h3 className="text-2xl font-semibold mb-2 text-[#D4AF37]">Aixa</h3>
                         <p className="text-gray-400 mb-4">Especialista en reparación de hardware.</p>
                         <a

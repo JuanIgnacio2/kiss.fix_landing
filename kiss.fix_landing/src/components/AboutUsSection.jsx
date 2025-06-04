@@ -41,7 +41,7 @@ const AboutUsSection = () => {
                     Fundado por <span className="text-white font-medium">Juan</span> y <span className="text-white font-medium">Aixa</span>, nuestro objetivo es que cada cliente se vaya con su dispositivo funcionando como nuevo y una sonrisa en el rostro.
                 </p>   
             </motion.div>
-            <div className='flex flex-col md:flex-row items-center gap-16'>
+            <div className='flex flex-col md:flex-row items-center gap-2'>
                 {teamMembers.map((member, index) => (
                     <motion.div
                         key={index}

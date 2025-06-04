@@ -3,22 +3,48 @@ import { FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
-
+    const [activeSection, setActiveSection] = useState("");
+    
+    const menuItems = [
+        { name: 'Inicio', href: '#' },
+        { name: 'Servicios', href: '#services' },
+        { name: 'Sobre Nosotros', href: '#about' },
+        { name: 'Contacto', href: '#contact' },
+    ]
+    
     const toggleMenu = () => setMenuOpen(!menuOpen)
 
-    const menuItems = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Sobre Nosotros', href: '#about' },
-    { name: 'Contacto', href: '#contact' },
-    ]
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+            }
+            });
+        },
+        { rootMargin: "-50% 0px -50% 0px", threshold: 0 }
+        );
+
+        menuItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+        if (section) observer.observe(section);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    // Prevenir scroll al abrir menú en móvil
+    useEffect(() => {
+        document.body.style.overflow = menuOpen ? "hidden" : "auto";
+    }, [menuOpen]);
 
     return(
-        <nav className="bg-black text-white py-4 shadow-md">
+        <nav className="fixed top-0 left-0 z-50 w-full bg-black text-white py-4 shadow-md">
             <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
                 {/*LOGO*/}
                 <div className="text-2xl font-bold">
-                    <a href="/" className="flex items-center">
+                    <a href="/" className="flex items-center trasnsform transition-transform hover:scale-105 hover:rotate-1">
                         <img src="../../public/kiss.fix_icono.png" alt="Logo" className="h-8 mr-2" />
                     </a>
                 </div>
@@ -29,7 +55,11 @@ const Navbar = () => {
                     <li key={item.name}>
                     <a
                         href={item.href}
-                        className="text-white px-2 py-1 border-b-2 border-transparent hover:border-[#D4AF37] transition-all duration-400"
+                        className={`px-2 py-1 border-b-2 transition-all duration-300 ${
+                        activeSection === item.id
+                            ? "text-[#D4AF37] border-[#D4AF37] font-semibold"
+                            : "border-transparent hover:border-[#D4AF37]"
+                        }`}
                     >
                         {item.name}
                     </a>
@@ -63,15 +93,19 @@ const Navbar = () => {
                 menuOpen ? 'max-h-80 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'
                 }`}
             >
-                <div className="bg-gray-900 px-6 py-4 space-y-4 text-white text-lg flex flex-col items-center justify-center transform transition-transform rounded-b-lg shadow-md">
+                <div className="px-6 pt-4 space-y-4 text-white text-lg flex flex-col items-center justify-center transform transition-transform rounded-b-lg shadow-md">
                     {menuItems.map((item) => (
                         <a
-                        key={item.name}
-                        href={item.href}
-                        onClick={() => setMenuOpen(false)}
-                        className="block text-white px-2 py-2 rounded hover:bg-[#D4AF37]/20 hover:text-[#D4AF37] transition-all duration-200"
+                            key={item.name}
+                            href={item.href}
+                            onClick={() => setMenuOpen(false)}
+                            className={`block px-2 py-2 rounded transition-all duration-200 ${
+                                activeSection === item.id
+                                ? "text-[#D4AF37] font-semibold"
+                                : "hover:bg-[#D4AF37]/20 hover:text-[#D4AF37]"
+                            }`}
                         >
-                        {item.name}
+                            {item.name}
                         </a>
                     ))}
                 </div>

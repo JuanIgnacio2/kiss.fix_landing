@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 
 const HeroSection = () => {
     return (
-        <section id="hero" className = "relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-black overflow-hidden">
+        <section className = "relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-black overflow-hidden">
             {/* Imagen de fondo tipo marca de agua */}
             <motion.img
                 src={logo}
